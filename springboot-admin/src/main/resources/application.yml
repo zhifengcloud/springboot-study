@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: springboot-admin
+server:
+  port: 9572
+
+#http://localhost:9572/applications#application
+
+#security:
+#  enable: false
+#  user:
+#    name: admin
+#    password: admin

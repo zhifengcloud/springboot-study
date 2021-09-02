@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: springboot-data-mongo-demo
+
+  data:
+    mongodb:
+      uri: mongodb://192.168.1.11:17017/logdb
+server:
+  port: 8081
+

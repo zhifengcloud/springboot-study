@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: sentinel-demo
+server:
+  port: 8888
+
+#jvm 启动参数：-Dcsp.sentinel.dashboard.server=192.168.1.11:8847 -Dproject.name=sentinel-demo

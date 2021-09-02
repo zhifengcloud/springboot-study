@@ -1,0 +1,12 @@
+docs/
+.idea/
+*.iml
+dist/
+target/
+.settings
+.classpath
+.project
+.iml
+catalina.out
+logs/
+.flattened-pom.xml

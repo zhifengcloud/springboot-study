@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: springboot-actrator
+
+  #   注入到spring-boot-admin
+  boot:
+    admin:
+      client:
+        url: http://localhost:9572
+server:
+  port: 8090
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+

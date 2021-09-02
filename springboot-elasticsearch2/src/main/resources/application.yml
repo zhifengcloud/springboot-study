@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: springboot-data-elasticserarch-demo
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 127.0.0.1:9200
+elasticsearch:
+  address: 127.0.0.1:9200
+server:
+  port: 8082
