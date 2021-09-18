@@ -33,7 +33,10 @@ public class TestController {
         return"welcome test4";
     }
 
-    @SentinelResource(value = "test3", blockHandler = "exceptionHandler")
+
+    // http://localhost:8888/v1/test3
+//    @SentinelResource(value = "test3", blockHandler = "exceptionHandler")
+    @SentinelResource(value = "test3")
     @GetMapping(value = "/test3")
     public String test3(){
         return"welcome test3";
