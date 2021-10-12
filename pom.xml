@@ -15,6 +15,7 @@
     <module>springboot-elasticsearch2</module>
     <module>elasticjob-example-lite-springboot</module>
     <module>sentinel-demo</module>
+    <module>spring-boot-docker</module>
   </modules>
   <packaging>pom</packaging>
 

@@ -1,3 +1,5 @@
+server:
+  port: 8090
 spring:
   application:
     name: springboot-actrator
@@ -6,14 +8,55 @@ spring:
   boot:
     admin:
       client:
-        url: http://localhost:9572
-server:
-  port: 8090
+        url: http://127.0.0.1:9572
+        username: admin
+        password: admin
 
+# actuator
 management:
   endpoints:
     web:
+      base-path: /monitor
       exposure:
         include: "*"
         exclude: "env,beans"
+    health:
+      show-details: always
 
+
+# swagger
+swagger:
+  docket:
+    enable: true
+    host: 114.132.229.68:8090
+  api-info:
+    title: springboot-test
+    description: |
+      <div>签名规则：</div>
+      <ul>
+        <li>以参数名做升序排序后，使用 & 符号连接，得到待加密字符源串</dl>
+        <li>如有参数：a=val1, x=val2, p=val3, 得到源串为：a=val1&p=val3&x=val2, 采用Hmac-sha1算法，以openkey作为密钥对源串做加密处理，结果为16进制小写字符串</dl>
+        <li>如：hmac-sha1("993cf7deeb4112e65251b86713c090fb", "a=val1&p=val3&x=val2")，结果为：152428ca4d21d732a27f15d67c1c0d4573dc7627</dl>
+      </ul>
+    version: 0.0.3
+  contact:
+    name: springboot
+    url: http://www.youdiancx.com
+    email: y22zf@youdiancx.com
+
+### 随机字符串：32位MD5字符串
+com:
+  book:
+    name: spring boot 2
+    author: yaoming
+    randomValue: ${random.value}
+    ### 随机生成int类型的数
+    randomInt: ${random.int}
+    ### 随机生成long类型的数
+    randomLong: ${random.long}
+    ### 随机生成uuid
+    randomUuid: ${random.uuid}
+    ### 10以内的随机数
+    randomLen: ${random.int(10)}
+    ### 随机生成[1024,65536]范围内的数
+    randomRange: ${random.int[1024,65536]}
